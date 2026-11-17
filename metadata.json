@@ -1,0 +1,6 @@
+{
+  "name": "DERMA-SATU",
+  "description": "Satu Rantai Keputusan Antibiotik Bijak untuk Kulit Anjing — Platform stewardship dermatologi veteriner tertutup (closed-loop) berbasis data untuk pioderma superfisial anjing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

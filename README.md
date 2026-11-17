@@ -1,11 +1,37 @@
-<div align="center">
+# DERMA-SATU
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+**Satu Rantai Keputusan Antibiotik Bijak untuk Kulit Anjing**
 
-  <h1>Built with AI Studio</h2>
+DERMA-SATU adalah prototipe aplikasi web interaktif berbasis klien (*client-side dummy data*, tanpa backend) untuk memvisualisasikan model *closed-loop veterinary dermatology stewardship* pada kasus pioderma superfisial anjing.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+> **Disclaimer:** Prototipe konsep untuk keperluan lomba esai/inovasi. Bukan alat diagnosis klinis atau peresepan. Keputusan klinis tetap berada pada dokter hewan. Kelayakan dan dampak DERMA-SATU masih perlu diuji.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Cara Menjalankan Secara Lokal
 
-</div>
+1. Pastikan Node.js (>= 18) terpasang.
+2. Instal dependensi:
+   ```bash
+   npm install
+   ```
+3. Jalankan server pengembangan:
+   ```bash
+   npm run dev
+   ```
+4. Buka `http://localhost:3000` di peramban.
+
+## Build & Deploy ke Vercel
+
+```bash
+npm run build
+```
+
+File `vercel.json` sudah dikonfigurasi untuk SPA routing (`/` dan `/dashboard`), sehingga proyek dapat langsung di-deploy ke Vercel melalui Git atau `vercel --prod`.
+
+## Cara Mengganti Data Dummy
+
+Seluruh data simulasi terpusat di folder `/src/data`:
+
+- `src/data/literatureData.ts`: Angka epidemiologi dan sitasi literatur ilmiah yang tampil di halaman beranda.
+- `src/data/mockData.ts`: Data simulasi kasus pasien, antibiogram regional, log resep, KPI klinik, antrean voucher, jadwal terapi, antrean sinkronisasi offline, laporan penyimpangan, persetujuan, pengguna, serta log audit awal.
+
+Cukup ubah array atau objek di kedua file tersebut tanpa perlu mengubah logika komponen di `/src/modules` atau `/src/pages`.
